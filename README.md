@@ -4,8 +4,8 @@
 
 ![](./images/17.41.50.png)
 
-iOS 健康只会选取一个数据源来显示当天步数，可以手动把app优先度调高。
-
-<https://discussions.apple.com/thread/7341876>
-
 ![](./images/17.40.50.png)
+
+iOS 健康只会选取一个数据源来显示当天步数，可以手动把app优先度调高。参考：<https://discussions.apple.com/thread/7341876>
+
+
