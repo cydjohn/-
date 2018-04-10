@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前步数为:0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbv-l8-kPV">
-                                <rect key="frame" x="16" y="125" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前步数为:0.0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbv-l8-kPV">
+                                <rect key="frame" x="16" y="125" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rdz-M6-3Dx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入您想添加的步数（可以为负数）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rdz-M6-3Dx">
                                 <rect key="frame" x="16" y="266" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -42,7 +42,6 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rdz-M6-3Dx" secondAttribute="trailing" constant="16" id="7mm-9Y-tlX"/>
                             <constraint firstItem="Fbv-l8-kPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MkT-vQ-Ia3"/>
-                            <constraint firstItem="Rdz-M6-3Dx" firstAttribute="top" secondItem="Fbv-l8-kPV" secondAttribute="bottom" constant="120" id="UmB-eL-lM9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FS1-aR-dpu" secondAttribute="bottom" constant="333" id="bBW-PQ-cEc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fbv-l8-kPV" secondAttribute="trailing" constant="16" id="eLt-YB-mJk"/>
                             <constraint firstItem="FS1-aR-dpu" firstAttribute="top" secondItem="Rdz-M6-3Dx" secondAttribute="bottom" constant="8" id="hoP-Uk-rax"/>

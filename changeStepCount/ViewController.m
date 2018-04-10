@@ -22,7 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view, typically from a nib.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignTextFiledFirstResponse)];
+    [self.view addGestureRecognizer:tap];
+    
+}
+
+- (void) resignTextFiledFirstResponse {
+    [self.stepsTextField resignFirstResponder];
 }
 
 
@@ -134,7 +140,7 @@
 
             NSString *totalCountsString = [NSNumberFormatter localizedStringFromNumber:@(deviceStepCounts+appStepCounts) numberStyle:NSNumberFormatterNoStyle];
             
-            NSString *text = [NSString stringWithFormat:@"当前步数为: %@", totalCountsString];
+            NSString *text = [NSString stringWithFormat:@"设备步数为: %d,app步数为: %d, 总步数为: %@", (int)deviceStepCounts,(int)appStepCounts,totalCountsString];
             self.stepCountValueLabel.text = text;
         });
         
