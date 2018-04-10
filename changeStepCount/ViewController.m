@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <HealthKit/HealthKit.h>
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *stepCountValueLabel;
 @property (weak, nonatomic) IBOutlet UITextField *stepsTextField;
 @property (nonatomic) HKHealthStore *healthStore;
@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.stepsTextField.delegate = self;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignTextFiledFirstResponse)];
     [self.view addGestureRecognizer:tap];
     
@@ -38,6 +38,7 @@
 }
 - (IBAction)changeButton:(id)sender {
     [self saveStepCountIntoHealthStore:[self.stepsTextField.text doubleValue]];
+    [self.stepsTextField resignFirstResponder];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -182,6 +183,11 @@
         
         [self updateStepCountLabel];
     }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.stepsTextField resignFirstResponder];
+    return YES;
 }
 
 @end
